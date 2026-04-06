@@ -1,13 +1,17 @@
 import React from "react";
 import { FaRegStar } from "react-icons/fa";
+import { Link } from "react-router";
 
 const BooksCard = ({ book }) => {
   return (
     <div>
       <div className="p-6 rounded-2xl border border-[#13131320]">
-        <div className="flex justify-center items-center py-8 bg-[#F3F3F3] rounded-2xl">
+        <Link
+          to={`/book-detail/${book.bookId}`}
+          className="flex justify-center items-center py-8 bg-[#F3F3F3] rounded-2xl"
+        >
           <img className="max-h-50" src={book.image} alt={book.bookName} />
-        </div>
+        </Link>
 
         <div className="mt-6">
           <div className="font-work flex gap-5 font-medium">
