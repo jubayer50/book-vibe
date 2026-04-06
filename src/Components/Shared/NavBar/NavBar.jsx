@@ -66,14 +66,16 @@ const NavBar = () => {
             </ul>
           </div>
           <NavLink to={"/"}>
-            <h2 className="text-[28px] font-bold text-[#131313]">Book Vibe</h2>
+            <h2 className="text-[19px] md:text-[28px] font-bold text-[#131313]">
+              Book Vibe
+            </h2>
           </NavLink>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end">
-          <div className="flex gap-4 items-center font-semibold text-lg">
+          <div className="flex gap-2 md:gap-4 items-center font-semibold text-lg">
             <a className="btn bg-[#23BE0A] text-white rounded-lg">Button</a>
             <a className="btn bg-[#59C6D2] text-white rounded-lg">Button</a>
           </div>
