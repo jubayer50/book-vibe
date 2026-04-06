@@ -26,7 +26,7 @@ const NavBar = () => {
       </li>
       <li>
         <NavLink
-          to={"/nothing"}
+          to={"/Read-to-Book"}
           className={({ isActive }) =>
             `mr-1 text-lg ${isActive ? "font-semibold border-2 rounded-lg border-[#23BE0A] text-[#23BE0A]" : ""}`
           }
@@ -38,7 +38,7 @@ const NavBar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100 shadow-sm font-work">
+    <div className="bg-base-100 shadow-sm font-work">
       <div className="navbar max-w-292.75 mx-auto">
         <div className="navbar-start">
           <div className="dropdown">

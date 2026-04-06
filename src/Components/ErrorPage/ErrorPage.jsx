@@ -3,11 +3,11 @@ import { NavLink } from "react-router";
 
 const ErrorPage = () => {
   return (
-    <div className="flex justify-center items-center h-[60vh]">
-      <div className="flex flex-col justify-center items-center">
-        <h2 className="text-red-500 font-bold">error</h2>
+    <div className="flex justify-center items-center h-screen">
+      <div className="flex flex-col justify-center items-center font-work">
+        <h2 className="text-5xl font-bold">404</h2>
         <NavLink to={"/"}>
-          <button className="btn mt-2">Go Home</button>
+          <button className="btn mt-4 bg-[#23BE0A] text-white">Go Home</button>
         </NavLink>
       </div>
     </div>
