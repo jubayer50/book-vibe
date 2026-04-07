@@ -76,8 +76,8 @@ const NavBar = () => {
         </div>
         <div className="navbar-end">
           <div className="flex gap-2 md:gap-4 items-center font-semibold text-lg">
-            <a className="btn bg-[#23BE0A] text-white rounded-lg">Button</a>
-            <a className="btn bg-[#59C6D2] text-white rounded-lg">Button</a>
+            <a className="btn bg-[#23BE0A] text-white rounded-lg">Sign In</a>
+            <a className="btn bg-[#59C6D2] text-white rounded-lg">Sign Up</a>
           </div>
         </div>
       </div>
