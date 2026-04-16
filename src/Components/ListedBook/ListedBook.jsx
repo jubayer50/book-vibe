@@ -7,30 +7,38 @@ const ListedBook = ({ sortBy }) => {
 
   const { readListBooks } = bookContext;
 
-  const [filteredReadListBooks, setFilteredReadListBooks] = useState([]);
+  const [filterReadListBooks, setFilterReadListBooks] = useState(readListBooks);
 
   useEffect(() => {
-    if (sortBy) {
-      if (sortBy === "pages") {
-        const sortedReadListBooks = [...readListBooks].sort(
-          (a, b) => a.totalPages - b.totalPages,
-        );
-        setFilteredReadListBooks(sortedReadListBooks);
-      } else if (sortBy === "rating") {
-        const sortedReadListBooks = [...readListBooks].sort(
-          (a, b) => a.rating - b.rating,
-        );
-        setFilteredReadListBooks(sortedReadListBooks);
-      }
+    if (sortBy === "pages") {
+      const sortedReadListBooks = [...readListBooks].sort(
+        (a, b) => a.totalPages - b.totalPages,
+      );
+      setFilterReadListBooks(sortedReadListBooks);
+    } else if (sortBy === "rating") {
+      const sortedReadListBooks = [...readListBooks].sort(
+        (a, b) => a.rating - b.rating,
+      );
+      setFilterReadListBooks(sortedReadListBooks);
     }
   }, [sortBy, readListBooks]);
 
+  if (filterReadListBooks.length === 0) {
+    return (
+      <div className="bg-gray-100 rounded-lg py-15 md:py-40 mt-4">
+        <h2 className="text-lg md:text-2xl text-center">
+          There is no book in the read list!
+        </h2>
+      </div>
+    );
+  }
+
   return (
     <div className="mt-12 space-y-6">
-      {filteredReadListBooks.map((filteredReadListBook, i) => (
+      {filterReadListBooks.map((filterReadListBook, i) => (
         <ListBookCard
           key={i}
-          filteredReadListBook={filteredReadListBook}
+          filterReadListBook={filterReadListBook}
         ></ListBookCard>
       ))}
     </div>

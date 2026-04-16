@@ -11,17 +11,19 @@ const Books = () => {
 
   const { readListBooks, wishLists } = bookContext;
 
-  const [sortBy, setSortBy] = useState("pages");
-  console.log(sortBy);
+  const [sortBy, setSortBy] = useState("");
+  // console.log(sortBy);
 
   return (
     <div className="max-w-292.75 mx-auto mt-12">
+      {/* book page title */}
       <div className="bg-[#13131308] rounded-2xl py-8">
         <h2 className="text-[#131313] font-bold text-3xl font-work text-center">
           Books
         </h2>
       </div>
 
+      {/* short by */}
       <div className="flex justify-center my-5 font-work">
         <div className="dropdown dropdown-center">
           <div
@@ -29,7 +31,7 @@ const Books = () => {
             role="button"
             className="btn rounded-lg bg-[#23BE0A] text-white m-1"
           >
-            Sort By{" "}
+            Sort By
             <RiArrowDropDownLine className="text-3xl"></RiArrowDropDownLine>
           </div>
           <ul
@@ -46,6 +48,7 @@ const Books = () => {
         </div>
       </div>
 
+      {/* react tabs */}
       <div>
         <Tabs className="font-work mt-8">
           <TabList>
