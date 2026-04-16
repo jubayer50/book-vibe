@@ -26,7 +26,7 @@ const NavBar = () => {
       </li>
       <li>
         <NavLink
-          to={"/Read-to-Book"}
+          to={"/pages-to-read"}
           className={({ isActive }) =>
             `mr-1 text-lg ${isActive ? "font-semibold border-2 rounded-lg border-[#23BE0A] text-[#23BE0A]" : ""}`
           }
